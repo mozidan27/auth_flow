@@ -1,3 +1,4 @@
+import 'package:auth_flow/core/funcations/navigation.dart';
 import 'package:auth_flow/core/helper/spacing.dart';
 import 'package:auth_flow/core/utils/app_assets.dart';
 import 'package:auth_flow/core/utils/app_color.dart';
@@ -41,12 +42,15 @@ class OnboardingView extends StatelessWidget {
               ),
               verticalSpace(120),
 
-              CustomButtom(text: AppStrings.login, onTap: () {}),
+              CustomButtom(
+                text: AppStrings.signIn,
+                onTap: () => customnavigate(context, '/signin'),
+              ),
               verticalSpace(16),
               CustomButtom(
                 colors: AppColor.darkGrey,
                 text: AppStrings.signUp,
-                onTap: () {},
+                onTap: () => customnavigate(context, '/signup'),
               ),
             ],
           ),

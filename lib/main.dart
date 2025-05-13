@@ -1,3 +1,4 @@
+import 'package:auth_flow/core/routes/app_router.dart';
 import 'package:auth_flow/features/onboarding/presentation/screen/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,7 @@ class Appso extends StatelessWidget {
     return MaterialApp(
       home: OnboardingView(),
       debugShowCheckedModeBanner: false,
+      routes: buildAppRoutes(),
     );
   }
 }
