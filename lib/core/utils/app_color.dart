@@ -8,4 +8,5 @@ abstract class AppColor {
   static Color darkGrey = Color(0xff39434F);
   static Color grey = Color(0xff808B9A);
   static Color lightGrey = Color(0xffD9DFE6);
+  static Color abitDarkGrey = Color(0xff606873);
 }

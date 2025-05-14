@@ -4,6 +4,7 @@ abstract class AppStrings {
           letsGetStarted =
           "Let's \nget started.",
       everythingStart = "Everything start from here.",
-      signIn = "Sign In",
+      logIn = "Login",
+      welcomeback = "Welcome back! Please enter your details.",
       signUp = "Sign Up";
 }

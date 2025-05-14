@@ -23,6 +23,7 @@ class OnboardingView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SvgPicture.asset(Assets.imagesLogo, width: 120),
+              verticalSpace(17.5),
               SizedBox(
                 width: double.infinity,
                 child: SvgPicture.asset(
@@ -42,12 +43,12 @@ class OnboardingView extends StatelessWidget {
               ),
               verticalSpace(120),
 
-              CustomButtom(
-                text: AppStrings.signIn,
-                onTap: () => customnavigate(context, '/signin'),
+              MyCustomButtom(
+                text: AppStrings.logIn,
+                onTap: () => customnavigate(context, '/login'),
               ),
               verticalSpace(16),
-              CustomButtom(
+              MyCustomButtom(
                 colors: AppColor.darkGrey,
                 text: AppStrings.signUp,
                 onTap: () => customnavigate(context, '/signup'),

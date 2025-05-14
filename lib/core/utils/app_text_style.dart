@@ -8,15 +8,28 @@ abstract class CustomTextStyles {
     color: AppColor.darkGrey,
     fontFamily: "SoraSemi",
   );
-  static final soraSemi16LightGrey = TextStyle(
-    fontSize: 16,
-    color: AppColor.lightGrey,
-    fontFamily: "SoraSemi",
+  static final noto14WhiteMedium = TextStyle(
+    fontSize: 14,
+    color: AppColor.white,
+    fontWeight: FontWeight.w900,
+    fontFamily: "Noto",
+  );
+  static final noto14BlueRegular600 = TextStyle(
+    fontSize: 14,
+    color: AppColor.blue,
+    fontWeight: FontWeight.w600,
+    fontFamily: "Noto",
   );
   static final sora16GreyRegular = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
     color: AppColor.grey,
     fontFamily: "Sora",
+  );
+  static final catamaran26DarkGreybold = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: AppColor.darkGrey,
+    fontFamily: "Catamaran",
   );
 }

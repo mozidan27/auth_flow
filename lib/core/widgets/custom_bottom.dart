@@ -2,8 +2,13 @@ import 'package:auth_flow/core/utils/app_color.dart';
 import 'package:auth_flow/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
-class CustomButtom extends StatelessWidget {
-  const CustomButtom({super.key, required this.text, this.onTap, this.colors});
+class MyCustomButtom extends StatelessWidget {
+  const MyCustomButtom({
+    super.key,
+    required this.text,
+    this.onTap,
+    this.colors,
+  });
   final String text;
   final void Function()? onTap;
   final Color? colors;
@@ -16,10 +21,13 @@ class CustomButtom extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           color: colors ?? AppColor.blue,
-          borderRadius: BorderRadius.circular(60),
+          borderRadius: BorderRadius.circular(14),
         ),
         child: Center(
-          child: Text(text, style: CustomTextStyles.soraSemi16LightGrey),
+          child: Text(
+            text,
+            style: CustomTextStyles.noto14WhiteMedium.copyWith(fontSize: 16),
+          ),
         ),
       ),
     );

@@ -76,9 +76,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Ag
+    - family: Catamaran
       fonts:
-        - asset: assets/fonts/ag-helvetica.ttf
+        - asset: assets/fonts/Catamaran-Bold.ttf
     - family: Noto
       fonts:
         - asset: assets/fonts/NotoSans-VariableFont_wdth,wght.ttf
