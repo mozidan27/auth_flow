@@ -1,8 +1,13 @@
+import 'package:auth_flow/core/database/cache/cache_helper.dart';
 import 'package:auth_flow/core/routes/app_router.dart';
+import 'package:auth_flow/core/services/service_locator.dart';
 import 'package:auth_flow/features/onboarding/presentation/screen/onboarding_view.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  setupServiceLocator();
+  await getIt<CacheHelper>().init();
   runApp(const Appso());
 }
 
