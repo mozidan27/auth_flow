@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/fb.svg
   static const String imagesFb = "assets/images/fb.svg";
 
+  /// Assets for imagesForgotpass
+  /// assets/images/forgotpass.svg
+  static const String imagesForgotpass = "assets/images/forgotpass.svg";
+
   /// Assets for imagesGoogle
   /// assets/images/google.svg
   static const String imagesGoogle = "assets/images/google.svg";

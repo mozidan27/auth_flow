@@ -78,9 +78,12 @@ class LogInView extends StatelessWidget {
                       //! form field
                       SignInFormField(),
                       verticalSpace(17),
-                      Text(
-                        "Forget Password?",
-                        style: CustomTextStyles.noto14BlueRegular600,
+                      GestureDetector(
+                        onTap: () => customnavigate(context, '/forgotpass'),
+                        child: Text(
+                          "Forget Password?",
+                          style: CustomTextStyles.noto14BlueRegular600,
+                        ),
                       ),
                       verticalSpace(33),
                       OrDividerWidget(),
