@@ -14,3 +14,6 @@ This project is to implement authentication using Firebase.
 
 ![Simulator Screenshot - iphone 15 pro max - 2025-05-15 at 09 08 10](https://github.com/user-attachments/assets/770b6205-2271-4b10-a5ae-a651eec18026)
 ![Simulator Screenshot - iphone 15 pro max - 2025-05-15 at 09 08 16](https://github.com/user-attachments/assets/cf582ea8-c6ef-40a3-9f72-6d96ea952e25)
+###### ⭐: Forgot Password View
+
+![Simulator Screenshot - iphone 15 pro max - 2025-05-15 at 12 10 45](https://github.com/user-attachments/assets/adf1860a-e21e-4678-a37b-62fcf8f4ac49)
