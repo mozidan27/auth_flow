@@ -5,8 +5,8 @@ import 'package:auth_flow/core/utils/app_strings.dart';
 import 'package:auth_flow/core/utils/app_text_style.dart';
 import 'package:auth_flow/core/widgets/custom_bottom.dart';
 import 'package:auth_flow/core/widgets/my_custom_text_form_field.dart';
+import 'package:auth_flow/features/auth/presentation/widgets/login_or_signup_text.dart';
 import 'package:auth_flow/features/auth/presentation/widgets/third_parties_buttons.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -147,22 +147,10 @@ class LogInView extends StatelessWidget {
                       verticalSpace(24),
                       SizedBox(child: Divider(color: AppColor.lightGrey)),
                       verticalSpace(24),
-                      RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "First time here? ",
-                              style: CustomTextStyles.noto14WhiteMedium
-                                  .copyWith(color: AppColor.abitDarkGrey),
-                            ),
-                            TextSpan(
-                              text: "Sign up for free",
-                              style: CustomTextStyles.noto14BlueRegular600
-                                  .copyWith(fontWeight: FontWeight.bold),
-                              recognizer: TapGestureRecognizer()..onTap = () {},
-                            ),
-                          ],
-                        ),
+
+                      LogInOrSignUpText(
+                        text1: "First time here? ",
+                        text2: "Sign up for free",
                       ),
                     ],
                   ),
