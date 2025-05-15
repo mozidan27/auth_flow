@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042467878809",
+    "project_id": "auth-flow-1264c",
+    "storage_bucket": "auth-flow-1264c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042467878809:android:9abc6b0e8b89a5622fc508",
+        "android_client_info": {
+          "package_name": "com.example.auth_flow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042467878809-clp4a498eim9737u03g6g515t3ffgjqg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuMWmEurKJ1q7Y02526ho3M6CmejFGoRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042467878809-clp4a498eim9737u03g6g515t3ffgjqg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
