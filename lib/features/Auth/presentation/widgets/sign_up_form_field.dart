@@ -1,3 +1,4 @@
+import 'package:auth_flow/core/funcations/navigation.dart';
 import 'package:auth_flow/core/helper/spacing.dart';
 import 'package:auth_flow/core/utils/app_assets.dart';
 import 'package:auth_flow/core/utils/app_color.dart';
@@ -69,7 +70,13 @@ class SignUpFormField extends StatelessWidget {
 
           SizedBox(child: Divider(color: AppColor.lightGrey)),
           verticalSpace(32),
-          LogInOrSignUpText(text1: 'Joined us before? ', text2: 'Login'),
+          LogInOrSignUpText(
+            text1: 'Joined us before? ',
+            text2: 'Login',
+            onTap: () {
+              customReplacementNavigate(context, "/login");
+            },
+          ),
         ],
       ),
     );

@@ -1,11 +1,12 @@
+import 'package:auth_flow/core/funcations/navigation.dart';
 import 'package:auth_flow/core/helper/spacing.dart';
 import 'package:auth_flow/core/utils/app_assets.dart';
 import 'package:auth_flow/core/utils/app_color.dart';
 import 'package:auth_flow/core/utils/app_strings.dart';
 import 'package:auth_flow/core/utils/app_text_style.dart';
-import 'package:auth_flow/core/widgets/custom_bottom.dart';
-import 'package:auth_flow/core/widgets/my_custom_text_form_field.dart';
 import 'package:auth_flow/features/auth/presentation/widgets/login_or_signup_text.dart';
+import 'package:auth_flow/features/auth/presentation/widgets/or_divider_widget.dart';
+import 'package:auth_flow/features/auth/presentation/widgets/sign_in_form_field.dart';
 import 'package:auth_flow/features/auth/presentation/widgets/third_parties_buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -74,61 +75,15 @@ class LogInView extends StatelessWidget {
                         ),
                       ),
                       verticalSpace(24),
-                      MyCustomTextFormField(hint: "Example@gmail.com"),
-                      verticalSpace(26),
-                      MyCustomTextFormField(
-                        hint: "Password",
-                        suffixIcon: SvgPicture.asset(
-                          Assets.imagesEyeoff,
-                          height: 15,
-                          width: 17,
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ),
-                      verticalSpace(16),
-                      Row(
-                        children: [
-                          Checkbox(
-                            side: BorderSide(color: AppColor.lightGrey),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(4.0),
-                            ),
-                            value: false,
-                            onChanged: (value) {},
-                            activeColor: AppColor.blue,
-                          ),
-                          Text(
-                            "I have agree to our Terms and Condition",
-                            style: CustomTextStyles.noto14WhiteMedium.copyWith(
-                              fontSize: 12,
-                              color: AppColor.grey,
-                            ),
-                          ),
-                        ],
-                      ),
-                      verticalSpace(24),
-                      MyCustomButtom(text: AppStrings.logIn),
+                      //! form field
+                      SignInFormField(),
                       verticalSpace(17),
-
                       Text(
                         "Forget Password?",
                         style: CustomTextStyles.noto14BlueRegular600,
                       ),
                       verticalSpace(33),
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(child: Divider(color: AppColor.lightGrey)),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 12.0,
-                            ),
-                            child: Text("Or"),
-                          ),
-                          Expanded(child: Divider(color: AppColor.lightGrey)),
-                        ],
-                      ),
+                      OrDividerWidget(),
                       verticalSpace(24),
                       ThirdPartiesButtons(
                         label: "Login with Google",
@@ -151,6 +106,9 @@ class LogInView extends StatelessWidget {
                       LogInOrSignUpText(
                         text1: "First time here? ",
                         text2: "Sign up for free",
+                        onTap: () {
+                          customReplacementNavigate(context, "/signup");
+                        },
                       ),
                     ],
                   ),

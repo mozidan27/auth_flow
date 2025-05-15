@@ -8,9 +8,11 @@ class LogInOrSignUpText extends StatelessWidget {
     super.key,
     required this.text1,
     required this.text2,
+    this.onTap,
   });
   final String text1;
   final String text2;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -27,7 +29,7 @@ class LogInOrSignUpText extends StatelessWidget {
             style: CustomTextStyles.noto14BlueRegular600.copyWith(
               fontWeight: FontWeight.bold,
             ),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+            recognizer: TapGestureRecognizer()..onTap = onTap,
           ),
         ],
       ),
