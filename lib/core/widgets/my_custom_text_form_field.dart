@@ -3,13 +3,32 @@ import 'package:auth_flow/core/utils/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class MyCustomTextFormField extends StatelessWidget {
-  const MyCustomTextFormField({super.key, required this.hint, this.suffixIcon});
+  const MyCustomTextFormField({
+    super.key,
+    required this.hint,
+    this.suffixIcon,
+    this.onChanged,
+    this.onFieldSubmittedl,
+    this.controller,
+    this.validator,
+    required this.obscureText,
+  });
   final String hint;
   final Widget? suffixIcon;
+  final void Function(String)? onChanged;
+  final void Function(String)? onFieldSubmittedl;
+  final TextEditingController? controller;
+  final String? Function(String?)? validator;
+  final bool obscureText;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      obscureText: obscureText,
+      validator: validator,
+      controller: controller,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmittedl,
       style: CustomTextStyles.noto14WhiteMedium.copyWith(
         color: AppColor.darkGrey,
       ),

@@ -14,9 +14,10 @@ class SignInFormField extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          MyCustomTextFormField(hint: "Example@gmail.com"),
+          MyCustomTextFormField(hint: "Example@gmail.com", obscureText: false),
           verticalSpace(26),
           MyCustomTextFormField(
+            obscureText: false,
             hint: "Password",
             suffixIcon: SvgPicture.asset(
               Assets.imagesEyeoff,

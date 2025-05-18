@@ -28,7 +28,10 @@ class ForgotPasswordFormField extends StatelessWidget {
             ),
           ),
           verticalSpace(32),
-          MyCustomTextFormField(hint: "Insert email address"),
+          MyCustomTextFormField(
+            hint: "Insert email address",
+            obscureText: false,
+          ),
           verticalSpace(124),
           MyCustomButtom(text: AppStrings.submit, onTap: () {}),
         ],

@@ -1,7 +1,7 @@
 import 'package:auth_flow/features/auth/presentation/screen/forgot_password_view.dart';
 import 'package:auth_flow/features/auth/presentation/screen/log_in_View.dart';
 import 'package:auth_flow/features/auth/presentation/screen/sign_up_view.dart';
-import 'package:auth_flow/features/profile/presentation/cubit/auth_cubit.dart';
+import 'package:auth_flow/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
