@@ -27,8 +27,8 @@ class SignUpFormField extends StatelessWidget {
         if (state is SignUpFauiler) {
           customToast(meg: state.errorMessage, backgroundColor: AppColor.red);
         } else if (state is SignUpSuccess) {
-          customToast(meg: "Welcome To Appso");
-          customReplacementNavigate(context, '/profile');
+          customToast(meg: "Successfully, Check your email.");
+          customReplacementNavigate(context, '/login');
         }
       },
       builder: (context, state) {

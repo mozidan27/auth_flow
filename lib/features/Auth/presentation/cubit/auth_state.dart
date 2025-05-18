@@ -25,3 +25,13 @@ final class SignInFauiler extends AuthState {
 
   SignInFauiler({required this.errorMessage});
 }
+
+final class PasswordResetEmailSuccess extends AuthState {}
+
+final class PasswordResetEmailLoading extends AuthState {}
+
+final class PasswordResetEmailFauiler extends AuthState {
+  final String errorMessage;
+
+  PasswordResetEmailFauiler({required this.errorMessage});
+}

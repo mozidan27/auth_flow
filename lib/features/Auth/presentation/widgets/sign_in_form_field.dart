@@ -8,6 +8,7 @@ import 'package:auth_flow/core/widgets/custom_bottom.dart';
 import 'package:auth_flow/core/widgets/my_custom_text_form_field.dart';
 import 'package:auth_flow/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:auth_flow/features/auth/presentation/cubit/auth_state.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,8 +25,12 @@ class SignInFormField extends StatelessWidget {
         if (state is SignInFauiler) {
           customToast(meg: state.errorMessage, backgroundColor: AppColor.red);
         } else if (state is SignInSuccess) {
-          customToast(meg: "Welcome Back");
-          customReplacementNavigate(context, '/profile');
+          FirebaseAuth.instance.currentUser!.emailVerified
+              ? customReplacementNavigate(context, '/profile')
+              : customToast(
+                meg: "Please verify your email",
+                backgroundColor: AppColor.red,
+              );
         }
       },
       builder: (context, state) {
