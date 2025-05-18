@@ -15,3 +15,13 @@ final class SignUpFauiler extends AuthState {
 final class CheckBoxStateUpdate extends AuthState {}
 
 final class ObscureTextUpdateState extends AuthState {}
+
+final class SignInSuccess extends AuthState {}
+
+final class SignInLoading extends AuthState {}
+
+final class SignInFauiler extends AuthState {
+  final String errorMessage;
+
+  SignInFauiler({required this.errorMessage});
+}
